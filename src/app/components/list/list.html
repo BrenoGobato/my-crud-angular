@@ -1,0 +1,12 @@
+<h1>Esta é a sua lista de Itens</h1>
+    @for (item of itemService.items(); track trackItemById($index, item)) {
+
+        <div class="item-lista">
+            <h3>Item: {{item.id}}</h3>
+            <p>Nome: {{ item.item_name }}</p>
+            <button (click)="deleteItem(item.id)">Excluir item</button>
+            <button [routerLink]="['/edit', item.id]">Editar item</button>
+        </div>
+    }
+
+<div class="btn-new-item"><button [routerLink]="['/add']">Novo item</button></div>
