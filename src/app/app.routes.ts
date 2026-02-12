@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { List } from './components/list/list';
-import { Form } from './components/form/form';
-import { Edit } from './components/edit/edit';
+import { Form } from './pages/form/form';
+
 
 export const routes: Routes = [
     {path: "", component: List},
-    {path: "add", component: Form},
-    {path: "edit/:id", component: Edit}
+    {path: "form", component: Form},
+    {path: "form/:id", component: Form}
+
 ];
